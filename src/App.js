@@ -23,14 +23,14 @@ class App extends React.Component {
   };
 
   addDecimal = val => {
-    // only add decimal if there is no current decimal point present in the input area
+    // It will add the Decimal if there is no currwnt value for that
     if (this.state.input.indexOf(".") === -1) {
       this.setState({ input: this.state.input + val });
     }
   };
 
   addZeroToInput = val => {
-    // if this.state.input is not empty then add zero
+    // It will only add Zero when this.state is not null
     if (this.state.input !== "") {
       this.setState({ input: this.state.input + val });
     }
@@ -41,24 +41,28 @@ class App extends React.Component {
   };
 
   add = () => {
+    //Normal Addition Functionality
     this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
     this.state.operator = "plus";
   };
 
   subtract = () => {
+    //Normal Substractioj Functionality
     this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
     this.state.operator = "subtract";
   };
   
   multiply = () => {
+    //Normal Multiplication
     this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
     this.state.operator = "multiply";
   };
 
   divide = () => {
+    //wasnt able to add the proper division symbol to just backslash
     this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
     this.state.operator = "divide";
@@ -95,6 +99,7 @@ class App extends React.Component {
   };
 
   render() {
+    //rendering after functionality
     return (
       <div className="App">
         <div className="calc-wrapper">
