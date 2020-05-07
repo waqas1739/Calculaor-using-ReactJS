@@ -1,4 +1,4 @@
-# Calculaor-using-ReactJS
+# Calculator-using-ReactJS
 Git clone 
 
 # Set up
